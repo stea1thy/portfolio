@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shashank Sivakumar | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #07070a;
+            color: white;
+            overflow-x: hidden;
+        }
+        .glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(99, 102, 241, .18), transparent 65%);
+            filter: blur(70px);
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+        }
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(255, 255, 255, .03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass {
+            background: rgba(255, 255, 255, .04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+        .card {
+            transition: .35s;
+            cursor: default;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(99, 102, 241, .6);
+            background: rgba(255, 255, 255, .07);
+        }
+        .orb {
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(100px);
+            opacity: .25;
+        }
+        /* small touch for skill icons */
+        .skill-icon {
+            font-size: 2.25rem;
+            /* 36px */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0.5rem;
+            color: #a5b4fc;
+            transition: .3s;
+        }
+        .card:hover .skill-icon {
+            color: #818cf8;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="grid-bg">
+    <div class="glow" id="glow"></div>
+
+    <div class="orb w-72 h-72 bg-indigo-500 top-20 left-10"></div>
+    <div class="orb w-72 h-72 bg-cyan-500 top-[900px] right-10"></div>
+
+    <!-- NAV -->
+    <nav class="sticky top-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-extrabold text-xl tracking-tight">SS.</div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+                <a href="#certifications" class="hover:text-indigo-400 transition">Certifications</a>
+                <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center relative z-10">
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                
+                <h1 class="text-6xl lg:text-8xl font-black mt-6 leading-[1.05]">Shashank<br />Sivakumar</h1>
+                <p class="text-xl text-zinc-400 mt-6">B.Tech Computer Science Engineering Student</p>
+                <p class="text-zinc-500 mt-2">Building software, research, and digital products.</p>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <a href="https://github.com/stea1thy" target="_blank" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 transition font-medium">GitHub</a>
+                    <a href="#projects" class="px-6 py-3 rounded-xl glass hover:bg-white/10 transition font-medium">Projects</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="w-72 h-72 glass rounded-[40px] flex items-center justify-center text-8xl font-black border border-indigo-500/40">SS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-24 relative z-10">
+        <h2 class="text-4xl font-bold mb-8">About</h2>
+        <div class="glass rounded-3xl p-8">
+            <p class="text-zinc-300 leading-8">
+                I'm a second-year B.Tech CSE student with a habit of building things that shouldn't exist yet.
+                Whether it's a full-stack mindfulness application, published research on carbon nanotubes, or experimental software projects, I enjoy working at the intersection of technology, creativity, and problem solving.
+                Outside software development, I've represented Grenada at Model UN, led video production for large-scale events, and contributed to published research.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS with proper icons -->
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-24 relative z-10">
+        <h2 class="text-4xl font-bold mb-8">Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Python -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-brands fa-python skill-icon"></i>
+                <span class="text-sm font-medium">Python</span>
+            </div>
+            <!-- Java -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-brands fa-java skill-icon"></i>
+                <span class="text-sm font-medium">Java</span>
+            </div>
+            <!-- JavaScript -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-brands fa-js skill-icon"></i>
+                <span class="text-sm font-medium">JavaScript</span>
+            </div>
+            <!-- C++ -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-solid fa-code skill-icon"></i>
+                <span class="text-sm font-medium">C++</span>
+            </div>
+            <!-- MySQL -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-solid fa-database skill-icon"></i>
+                <span class="text-sm font-medium">MySQL</span>
+            </div>
+            <!-- Node.js -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-brands fa-node-js skill-icon"></i>
+                <span class="text-sm font-medium">Node.js</span>
+            </div>
+            <!-- Electron -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-solid fa-atom skill-icon"></i>
+                <span class="text-sm font-medium">Electron</span>
+            </div>
+            <!-- HTML5 -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-brands fa-html5 skill-icon"></i>
+                <span class="text-sm font-medium">HTML5</span>
+            </div>
+            <!-- CSS3 -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-brands fa-css3-alt skill-icon"></i>
+                <span class="text-sm font-medium">CSS3</span>
+            </div>
+            <!-- AI -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-solid fa-brain skill-icon"></i>
+                <span class="text-sm font-medium">AI</span>
+            </div>
+            <!-- Premiere Pro -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-solid fa-video skill-icon"></i>
+                <span class="text-sm font-medium">Premiere Pro</span>
+            </div>
+            <!-- SEO -->
+            <div class="glass rounded-2xl p-5 text-center card">
+                <i class="fa-solid fa-chart-line skill-icon"></i>
+                <span class="text-sm font-medium">SEO</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-24 relative z-10">
+        <h2 class="text-4xl font-bold mb-8">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass rounded-3xl p-8 card">
+                <h3 class="text-2xl font-bold">Meditation Sanctuary</h3>
+                <p class="text-zinc-400 mt-3">Full-stack mindfulness platform featuring custom timers, ambient audio, and progress tracking.</p>
+            </div>
+            <div class="glass rounded-3xl p-8 card">
+                <h3 class="text-2xl font-bold">TechStore</h3>
+                <p class="text-zinc-400 mt-3">Desktop e-commerce application built using JavaScript and Electron.</p>
+            </div>
+            <div class="glass rounded-3xl p-8 card">
+                <h3 class="text-2xl font-bold">Carbon Nanotubes Research</h3>
+                <p class="text-zinc-400 mt-3">Published research exploring carbon nanotubes for neural applications.</p>
+            </div>
+            <div class="glass rounded-3xl p-8 card">
+                <h3 class="text-2xl font-bold">Coming Soon</h3>
+                <p class="text-zinc-400 mt-3">More experiments, software products, and research projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="max-w-7xl mx-auto px-6 py-24 relative z-10">
+        <h2 class="text-4xl font-bold mb-8">Certifications</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass rounded-3xl p-8 card text-center font-medium">IBM Data Fundamentals</div>
+            <div class="glass rounded-3xl p-8 card text-center font-medium">IBM Getting Started with Artificial Intelligence</div>
+            <div class="glass rounded-3xl p-8 card text-center font-medium">Oracle Java Foundations</div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-24 relative z-10">
+        <h2 class="text-4xl font-bold mb-8">Contact</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+            <input name="name" placeholder="Name" class="w-full p-4 rounded-2xl glass text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50" />
+            <input name="email" placeholder="Email" class="w-full p-4 rounded-2xl glass text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50" />
+            <textarea name="message" placeholder="Message" rows="6" class="w-full p-4 rounded-2xl glass text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50"></textarea>
+            <button class="bg-indigo-600 hover:bg-indigo-700 transition px-8 py-4 rounded-2xl font-medium">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 py-10 text-center text-zinc-500 text-sm">
+        &copy; 2026 Shashank Sivakumar &middot; Building software, research, and ideas.
+    </footer>
+
+    <!-- Mouse glow -->
+    <script>
+        const glow = document.getElementById('glow');
+        document.addEventListener('mousemove', e => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
